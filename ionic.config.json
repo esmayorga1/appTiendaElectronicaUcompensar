@@ -1,0 +1,7 @@
+{
+  "name": "appTiendaUcompesar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
