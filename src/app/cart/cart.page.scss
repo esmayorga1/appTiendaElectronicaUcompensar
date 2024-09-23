@@ -1,0 +1,128 @@
+.cart-content {
+    --background: #f9f9f9; // Fondo suave
+    padding: 10px;
+  }
+  
+  .cart-list {
+    margin-bottom: 20px;
+  }
+  
+  .cart-item {
+    background: white; // Fondo blanco para los elementos del carrito
+    border-radius: 10px; // Bordes redondeados
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Sombra sutil
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .cart-avatar img {
+    border-radius: 8px; // Bordes redondeados en la imagen
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 1.2em; // Aumenta el tamaño del nombre
+  }
+  
+  .data {
+    font-size: 0.9em; // Tamaño de fuente más pequeño
+    color: #555; // Color gris para los datos
+  }
+  
+  .total-item {
+    background: #f0f0f0; // Fondo diferente para el total
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888; // Color gris para el texto vacío
+    padding: 20px;
+  }
+  
+  .clear-cart-button {
+    background-color: #ff3e3e; // Color rojo para el botón
+    color: white;
+    font-weight: bold;
+    border-radius: 5px; // Bordes redondeados en el botón
+  }
+  
+  .total-item {
+    background: #f0f0f0; // Fondo diferente para el total
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex; // Usar flex para alinear elementos en la misma línea
+    justify-content: space-between; // Espaciado entre los elementos
+  }
+  
+  .total-label {
+    font-weight: bold; // Negrilla para el título
+    font-size: 1.2em; // Tamaño de fuente mayor
+  }
+  
+  .total-amount {
+    font-size: 1.2em; // Tamaño del total
+    color: #333; // Color del texto del total
+  }
+  
+  .empty-cart {
+    text-align: center; // Centrar el texto
+    margin-top: 50px;
+    font-size: 1.2em; // Tamaño de fuente para el mensaje vacío
+  }
+
+  ion-buttons {
+    ion-button {
+      --padding: 0;
+    }
+  }
+  
+  ion-icon {
+    font-size: 28px; // Ajusta el tamaño según lo necesites
+    color: var(--ion-color-primary); // Cambia el color si lo deseas
+  }
+  
+  .empty-cart {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px; // Tamaño de fuente
+  }
+
+  .back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    background: transparent; // Fondo transparente
+  }
+  
+  .empty-cart {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: gray;
+  }
+  
+  .total-item {
+    font-weight: bold;
+    background-color: #f9f9f9; // Fondo ligero
+  }
+  
+  .total-label {
+    margin: 0;
+  }
+  
+  .total-amount {
+    margin: 0;
+    font-size: 1.2em; // Tamaño más grande para destacar
+  }
+  
+  ion-list {
+    margin-top: 50px; // Espacio superior
+  }
+  
+  

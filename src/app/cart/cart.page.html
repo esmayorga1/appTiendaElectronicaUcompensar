@@ -1,0 +1,39 @@
+<app-header title="Carrito de Compras"></app-header>
+
+<ion-content>
+  <ion-button (click)="goBack()" fill="clear" class="back-button">
+    <ion-icon name="chevron-back-circle-sharp" style="font-size: 28px;"></ion-icon>
+  </ion-button>
+
+  <ion-list *ngIf="cart.length > 0; else emptyCart">
+    <ion-item *ngFor="let item of cart">
+      <ion-avatar slot="start">
+        <img [src]="item.img" />
+      </ion-avatar>
+      <ion-label>
+        <div class="name">{{ item.name }}</div>
+        <div class="data">
+          <strong>Precio:</strong> {{ item.price | currency: 'COP' }} <br>
+          <strong>Cantidad:</strong> {{ item.quantity }}
+        </div>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="total-item">
+      <ion-label>
+        <h2 class="total-label">PRECIO TOTAL:</h2>
+        <h3 class="total-amount">{{ totalAmount | currency: 'COP' }}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #emptyCart>
+    <div class="empty-cart">
+      <p>No hay productos en el carrito.</p>
+    </div>
+  </ng-template>
+
+  <ion-button (click)="clearCart()" expand="full">
+    Vaciar Carrito
+  </ion-button>
+</ion-content>

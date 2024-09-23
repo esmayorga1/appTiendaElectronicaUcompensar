@@ -1,0 +1,57 @@
+<app-header title="Inicio"></app-header>
+
+<!-- Banner -->
+<div class="banner">
+  <h1 class="banner-title">Bienvenido a nuestra Tienda</h1>
+</div>
+
+<h2 class="products-title">Productos de Tecnología</h2>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addUpdateProduct()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item-sliding class="product-item" *ngFor="let p of products">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="p.img" />
+        </ion-avatar>
+        <ion-label>
+          <div class="name">{{ p.name }}</div>
+          <div class="data">
+            <strong>Precio:</strong> {{ p.price | currency: 'COP' }} <br>
+            <strong>Unidades Vendidas:</strong> {{ p.soldUnits }} <br>
+            <strong>Cantidad:</strong>
+            <ion-button (click)="decrementQuantity(p)" fill="clear">-</ion-button>
+            {{ p.selectedQuantity || 0 }}
+            <ion-button (click)="incrementQuantity(p)" fill="clear">+</ion-button>
+          </div>
+        </ion-label>
+        <ion-button (click)="addToCart(p)">
+          <ion-icon name="cart"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <ion-item-options>
+        <ion-item-option (click)="addUpdateProduct(p)">
+          <ion-icon class="option-btn" name="create-outline"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="deleteProduct(p.id)">
+          <ion-icon class="option-btn" name="trash-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-button (click)="goToCart()" expand="full">
+    Ir al Carrito
+  </ion-button>
+
+  <ion-button (click)="signOut()" expand="full">
+    Cerrar sesión
+  </ion-button>
+</ion-content>
